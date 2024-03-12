@@ -1,33 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Boolean_Elevator</class>
+ <widget class="QMainWindow" name="Boolean_Elevator">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>1148</width>
-    <height>889</height>
+    <height>780</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>1148</width>
+    <height>780</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1148</width>
+    <height>780</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Boolean_Elevator</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTextBrowser" name="outputWidget">
+   <widget class="QTextBrowser" name="levels_widget">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>30</x>
       <y>30</y>
-      <width>751</width>
+      <width>71</width>
       <height>661</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="mouseTracking">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="focusPolicy">
      <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="controlButton">
@@ -42,6 +66,284 @@
     <property name="text">
      <string>Начать Симуляцию</string>
     </property>
+   </widget>
+   <widget class="QTextBrowser" name="elevators_widget">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>30</y>
+      <width>161</width>
+      <height>661</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="peoples_widgets">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>30</y>
+      <width>441</width>
+      <height>661</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>30</y>
+      <width>401</width>
+      <height>661</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_14">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>13</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Лифты</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="searching">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>13</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Поиск этатжа</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="departure">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>13</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Разгрузка</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Люди в кабинах</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="lift1name">
+           <property name="text">
+            <string>Лифт 1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lift2name">
+           <property name="text">
+            <string>Лифт 2</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lift3name">
+           <property name="text">
+            <string>Лифт 3</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lift4name">
+           <property name="text">
+            <string>Лифт 4</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="searching1">
+             <property name="text">
+              <string>False</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="searching2">
+             <property name="text">
+              <string>False</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="searching3">
+             <property name="text">
+              <string>False</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="searching4">
+             <property name="text">
+              <string>False</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="departure1">
+             <property name="text">
+              <string>False</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="departure2">
+             <property name="text">
+              <string>False</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="departure3">
+             <property name="text">
+              <string>False</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="departure4">
+             <property name="text">
+              <string>False</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QTextBrowser" name="people1">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextBrowser" name="people3">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextBrowser" name="people4">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextBrowser" name="people2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
