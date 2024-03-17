@@ -66,11 +66,6 @@ class ElevatorGraphic(QMainWindow, Ui_Boolean_Elevator):
             if any([len(i.people) != 0 for i in floors]) == 0 or all([i.in_cabine for i in peoples]):
                 for i in elevators:
                     i.departure = True
-            """for i in elevators:
-                if i.floor.floor_count == 40:
-                    i.type = 'down'
-                elif i.floor.floor_count == 1:
-                    i.type = 'up'"""
 
         self.update_widgets()
 
