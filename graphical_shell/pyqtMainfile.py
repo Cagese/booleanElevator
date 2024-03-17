@@ -19,6 +19,11 @@ class ElevatorGraphic(QMainWindow, Ui_Boolean_Elevator):
 
         self.controlButton.clicked.connect(self.run)
         self.update_widgets()
+        self.lift1name.setText(f'<a style="color:#0B1F6F"> {self.lift1name.text()} </a>')
+        self.lift2name.setText(f'<a style="color:#0E7637"> {self.lift2name.text()} </a>')
+        self.lift3name.setText(f'<a style="color:#7A2D06"> {self.lift3name.text()} </a>')
+        self.lift4name.setText(f'<a style="color:#690B6F"> {self.lift4name.text()} </a>')
+
 
     def run(self):
         if not (self.simulation):
