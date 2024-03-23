@@ -299,6 +299,19 @@
             </widget>
            </item>
            <item>
+            <widget class="QTextBrowser" name="people2">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+            </widget>
+           </item>
+           <item>
             <widget class="QTextBrowser" name="people3">
              <property name="enabled">
               <bool>false</bool>
@@ -313,19 +326,6 @@
            </item>
            <item>
             <widget class="QTextBrowser" name="people4">
-             <property name="enabled">
-              <bool>false</bool>
-             </property>
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QTextBrowser" name="people2">
              <property name="enabled">
               <bool>false</bool>
              </property>
