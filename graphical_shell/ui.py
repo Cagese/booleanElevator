@@ -182,7 +182,7 @@ class Ui_Boolean_Elevator(object):
         Boolean_Elevator.setWindowTitle(_translate("Boolean_Elevator", "Boolean_Elevator"))
         self.controlButton.setText(_translate("Boolean_Elevator", "Начать Симуляцию"))
         self.label_14.setText(_translate("Boolean_Elevator", "Лифты"))
-        self.searching.setText(_translate("Boolean_Elevator", "Поиск этатжа"))
+        self.searching.setText(_translate("Boolean_Elevator", "Поиск этажа"))
         self.departure.setText(_translate("Boolean_Elevator", "Разгрузка"))
         self.label_9.setText(_translate("Boolean_Elevator", "Люди в кабинах"))
         self.lift1name.setText(_translate("Boolean_Elevator", "Лифт 1"))

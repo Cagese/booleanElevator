@@ -157,7 +157,7 @@
           </size>
          </property>
          <property name="text">
-          <string>Поиск этатжа</string>
+          <string>Поиск этажа</string>
          </property>
         </widget>
        </item>

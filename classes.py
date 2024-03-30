@@ -50,7 +50,7 @@ class elevator:
         self.type = ''
 
     def gotofloor(self, floor_level):
-        if len(self.people_in_cabine) >= 10 or self.floor == floor_level:
+        if len(self.people_in_cabine) >= max_people_in_cabine or self.floor == floor_level:
             self.departure = True
 
         self.working = True
@@ -62,6 +62,8 @@ class elevator:
                 for i in range(self.floor.floor_count, floor_level, -1):
                     unloading_people(i)
                     for j in self.floor.people:
+                        if len(self.people_in_cabine) >= max_people_in_cabine:
+                            break
                         if j.queue:
                             if i >= int(j.queue[0]) >= floor_level:
                                 j.in_cabine = True
@@ -77,6 +79,8 @@ class elevator:
                 for i in range(self.floor.floor_count, floor_level):
                     unloading_people(i)
                     for j in self.floor.people:
+                        if len(self.people_in_cabine) >= max_people_in_cabine:
+                            break
                         if j.queue:
                             if i <= int(j.queue[0]) <= floor_level:
                                 j.in_cabine = True
@@ -92,6 +96,8 @@ class elevator:
             if self.type == 'up':
                 if self.floor.people:
                     for people in self.floor.people[:]:
+                        if len(self.people_in_cabine) >= max_people_in_cabine:
+                            break
                         if people.queue:
                             if int(people.queue[0]) >= self.floor.floor_count:
                                 self.floor.people.pop(self.floor.people.index(people))
@@ -99,6 +105,8 @@ class elevator:
             else:
                 if self.floor.people:
                     for people in self.floor.people[:]:
+                        if len(self.people_in_cabine) >= max_people_in_cabine:
+                            break
                         if people.queue:
                             if int(people.queue[0]) < self.floor.floor_count:
                                 self.floor.people.pop(self.floor.people.index(people))

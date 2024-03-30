@@ -14,7 +14,6 @@ if hasattr(QtCore.Qt, 'AA_UseHighDpiPixmaps'):
 
 colors = {True: '#166F0B', False: '#6C0000'}
 
-
 class ElevatorGraphic(QMainWindow, Ui_Boolean_Elevator):
     def __init__(self):
         super().__init__()
@@ -35,6 +34,8 @@ class ElevatorGraphic(QMainWindow, Ui_Boolean_Elevator):
         self.lift2name.setText(f'<a style="color:#6B6B6B"> {self.lift2name.text()} </a>')
         self.lift3name.setText(f'<a style="color:#C47D00"> {self.lift3name.text()} </a>')
         self.lift4name.setText(f'<a style="color:#690B6F"> {self.lift4name.text()} </a>')
+
+
 
     def stopwatch_update(self):
         self.stopwatch_start += 1
@@ -74,6 +75,7 @@ class ElevatorGraphic(QMainWindow, Ui_Boolean_Elevator):
 
     def mainThread(self):
         if self.simulation:
+
             for i in elevators:
                 i.custom_algoritm = self.custom_algoritm
             for i in floors:
