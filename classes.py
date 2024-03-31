@@ -130,6 +130,8 @@ class elevator:
                 for i in range(self.floor.floor_count, floor_level, -1):
                     unloading_people(i)
                     for j in self.floor.people:
+                        if len(self.people_in_cabine) >= max_people_in_cabine:
+                            break
                         if j.queue:
                             j.in_cabine = True
                             boarding = True
@@ -144,6 +146,8 @@ class elevator:
                 for i in range(self.floor.floor_count, floor_level):
                     unloading_people(i)
                     for j in self.floor.people:
+                        if len(self.people_in_cabine) >= max_people_in_cabine:
+                            break
                         if j.queue:
                             j.in_cabine = True
                             boarding = True
@@ -157,6 +161,8 @@ class elevator:
 
             if self.floor.people:
                 for people in self.floor.people[:]:
+                    if len(self.people_in_cabine) >= max_people_in_cabine:
+                        break
                     if people.queue:
                         self.floor.people.pop(self.floor.people.index(people))
                         self.people_in_cabine.append(people)
